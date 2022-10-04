@@ -11,11 +11,31 @@ const constraints = {
 }
 
 const configuration ={
-    iceServers:[
+    // iceServers:[
+    //     {
+    //         urls: "stun:stun.1.google.com:13902"
+    //     }
+    // ]
+    iceServers: [
         {
-            urls: "stun:stun.1.google.com:13902"
-        }
-    ]
+          urls: "stun:openrelay.metered.ca:80",
+        },
+        {
+          urls: "turn:openrelay.metered.ca:80",
+          username: "openrelayproject",
+          credential: "openrelayproject",
+        },
+        {
+          urls: "turn:openrelay.metered.ca:443",
+          username: "openrelayproject",
+          credential: "openrelayproject",
+        },
+        {
+          urls: "turn:openrelay.metered.ca:443?transport=tcp",
+          username: "openrelayproject",
+          credential: "openrelayproject",
+        },
+      ],
 }
 export const getLocalPreview = () =>{
 
