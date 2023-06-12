@@ -11,11 +11,6 @@ const constraints = {
 }
 
 const configuration ={
-    // iceServers:[
-    //     {
-    //         urls: "stun:stun.1.google.com:13902"
-    //     }
-    // ]
     iceServers: [
         {
           urls: "stun:openrelay.metered.ca:80",

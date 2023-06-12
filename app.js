@@ -15,7 +15,8 @@ let connectedPeersStrangers = []
 
 const io = require('socket.io')(server)
 
-io.on('connection',(socket)=>{ // on connection any client can be connected with it. it is waiting for user to connect
+// on connection any client can be connected with it. it is waiting for user to connect
+io.on('connection',(socket)=>{ 
     connectedPeers.push(socket.id)
 
     console.log(connectedPeers)
